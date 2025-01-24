@@ -1,0 +1,505 @@
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{latexsym}
+\usepackage{mathrsfs}
+\usepackage[usenames,svgnames,dvipsnames]{xcolor}
+\usepackage{hyperref}
+\usepackage[nameinlink]{cleveref}
+\usepackage{textcomp}
+% \usepackage{enumerate}
+\usepackage[shortlabels]{enumitem}
+\usepackage{dsfont}
+\usepackage{makecell}
+\usepackage[textsize=scriptsize,shadow]{todonotes}
+\usepackage{mathtools}
+\usepackage{microtype}
+\usepackage{epigraph}
+\setlength\epigraphrule{0pt}
+\setlength\epigraphwidth{8cm}
+% \setcounter{chapter}{-1}
+\usepackage[normalem]{ulem}
+\usepackage{stmaryrd}
+\usepackage{wasysym}
+% \usepackage{mdsymbol}
+% \usepackage{esint}
+% \usepackage[charter]{mathdesign}
+% \usepackage{pdfMsym}
+% \input pdfmsym
+% \pdfmsymsetscalefactor{11}
+\usepackage{multirow}
+\usepackage{prerex}
+\usepackage{csquotes}
+\usepackage{graphicx,tikz}
+\usepackage{caption}
+\usepackage{parallel}
+\usepackage{tikz-cd}
+\usepackage{asymptote}
+\usepackage{pgfplots, pst-node}
+\usepackage{pst-plot}
+\usetikzlibrary{positioning}
+\usetikzlibrary{shapes}
+\usetikzlibrary{plotmarks}
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{arrows.meta,bending}
+\usetikzlibrary{patterns}
+% \usepackage{genyoungtabtikz}
+% \usepackage{ytableau} LAGBE NA 
+\usepgfplotslibrary{colormaps}
+\pgfplotsset{
+compat=newest,
+colormap={mycolormap}{color=(darkgray) color=(lightgray) color=(gray)}
+}
+% \graphicspath{{./images/}}
+
+\definecolor{azuree}{HTML}{007FFF}
+\definecolor{Cobalt}{HTML}{0047AB}
+
+
+
+
+\newcommand{\cbrt}[1]{\sqrt[3]{#1}}
+\newcommand{\vect}[1]{\left\langle #1 \right\rangle}
+\newcommand{\floor}[1]{\left\lfloor #1 \right\rfloor}
+\newcommand{\ceil}[1]{\left\lceil #1 \right\rceil}
+\newcommand{\mailto}[1]{\href{mailto:#1}{\texttt{#1}}}
+\newcommand{\ol}{\overline}
+\newcommand{\ul}{\underline}
+\newcommand{\wt}{\widetilde}
+\newcommand{\wh}{\widehat}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\empt}{\varnothing}
+\newcommand{\les}{\leqslant}
+\newcommand{\smth}{C^{\infty}}
+\newcommand{\smtj}{C^{\infty}}
+\newcommand{\catname}{\mathsf}
+\newcommand{\cat}{\mathcal}
+\newcommand{\cone}{\mathbf{Cone}}
+\newcommand{\cocone}{\mathbf{Cocone}}
+\newcommand{\limc}{\varprojlim}
+\newcommand{\clim}{\varinjlim}
+\newcommand{\hrulebar}{
+\par\hspace{\fill}\rule{0.95\linewidth}{.7pt}\hspace{\fill}
+\par\nointerlineskip \vspace{\baselineskip}
+}
+\newcommand{\half}{\frac{1}{2}}
+
+
+
+\DeclareMathOperator{\cis}{cis}
+\DeclareMathOperator{\Int}{Int}
+\DeclareMathOperator{\Bd}{Bd}
+\DeclareMathOperator{\bd}{bd}
+\DeclareMathOperator{\Lk}{Lk}
+\DeclareMathOperator{\St}{St}
+\DeclareMathOperator{\Sd}{Sd}
+\DeclareMathOperator{\sd}{sd}
+\DeclareMathOperator{\Ext}{ext}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\cl}{cl}
+\DeclareMathOperator{\Cl}{Cl}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\Supp}{Supp}
+\DeclareMathOperator{\Diff}{Diff}
+\DeclareMathOperator{\Grp}{Group}
+\DeclareMathOperator{\idd}{\mathds{1}}
+\DeclareMathOperator{\ran}{range}
+\DeclareMathOperator{\diam}{diam}
+\DeclareMathOperator{\Arg}{Arg}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\ev}{eval}
+\DeclareMathOperator{\fun}{Fun}
+\DeclareMathOperator{\vol}{vol}
+\DeclareMathOperator{\grad}{grad}
+\DeclareMathOperator{\curl}{curl}
+\DeclareMathOperator{\divg}{div} % because \div doesnt work
+\DeclareMathOperator*{\lcm}{lcm}
+
+
+
+
+\newcommand{\CC}{\mathbb C}
+\newcommand{\FF}{\mathbb F}
+\newcommand{\NN}{\mathbb N}
+\newcommand{\QQ}{\mathbb Q}
+\newcommand{\RR}{\mathbb R}
+\newcommand{\EE}{\mathbb E}
+\newcommand{\HH}{\mathbb H}
+\newcommand{\LL}{\mathbb L}
+\newcommand{\ZZ}{\mathbb Z}
+\newcommand{\PP}{\mathbb P}
+\newcommand{\II}{\mathbb I}
+\newcommand{\KK}{\mathbb K}
+\newcommand{\dd}{\mathrm d}
+\renewcommand{\d}{\mathrm d}
+
+\newcommand{\A}{\mathcal A}
+\newcommand{\s}{\mathcal S}
+
+\newcommand{\w}{\wedge}
+\renewcommand{\t}{\otimes}
+\newcommand{\vf}{\mathfrak X}
+\newcommand{\sy}{\mathfrak S} 
+
+
+\newcommand{\RP}{\mathbb R P}
+
+\newcommand{\inv}{^{-1}}
+
+
+\newcommand{\abs}[1]{\left\lvert #1 \right\rvert}
+\newcommand{\norm}[1]{\left\lVert #1 \right\rVert}
+\newcommand{\dang}{\measuredangle} %% Directed angle
+\newcommand{\ray}[1]{\overrightarrow{#1}}
+\newcommand{\seg}[1]{\overline{#1}}
+\newcommand{\arc}[1]{\wideparen{#1}}
+\newcommand{\mcal}[1]{\mathcal{#1}}
+\newcommand{\mt}[1]{\mathtt{#1}}
+\newcommand{\ve}[1]{\mathbf{#1}}
+\newcommand{\fin}{\text{fin}}
+\newcommand{\tl}[1]{\overset{\sim}{#1}}
+
+
+\renewcommand{\qedsymbol}{$\blacksquare$}
+
+
+\newenvironment{subproof}[1][Proof]{%
+\begin{proof}[#1] \renewcommand{\qedsymbol}{$\square$}}%
+{\end{proof}}
+
+
+\newenvironment{soln}{\begin{proof}[Solution]}{\end{proof}}
+
+\newcommand{\liff}{\leftrightarrow}
+\newcommand{\lthen}{\rightarrow}
+\newcommand{\opname}{\operatorname}
+\newcommand{\surjto}{\twoheadrightarrow}
+\newcommand{\injto}{\hookrightarrow}
+
+\renewcommand{\Re}{\opname{Re}}
+\renewcommand{\Im}{\opname{Im}}
+
+\DeclareMathOperator{\im}{im} % Image
+\DeclareMathOperator{\Img}{Im} % Image
+\DeclareMathOperator{\coker}{coker} % Cokernel
+\DeclareMathOperator{\Coker}{Coker} % Cokernel
+\DeclareMathOperator{\Ker}{Ker} % Kernel
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\rk}{rk}
+\DeclareMathOperator{\tr}{Tr}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\nul}{nullity}
+\DeclareMathOperator{\dist}{dist}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Ob}{Ob}
+\DeclareMathOperator{\sub}{Sub}
+\DeclareMathOperator{\dom}{dom}
+\DeclareMathOperator{\cod}{cod}
+\DeclareMathOperator{\op}{op}
+\DeclareMathOperator{\rep}{Rep}
+\DeclareMathOperator{\res}{Res}
+\DeclareMathOperator{\ind}{Ind}
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\sym}{Sym} 
+\DeclareMathOperator{\spann}{span} % because \span doesnt work
+\DeclareMathOperator{\Cok}{Coker} % Cokernel
+\DeclareMathOperator{\cok}{cok} % Cokernel
+\newcommand{\del}{\partial}
+
+% matrix linear groups
+\DeclareMathOperator{\GL}{GL}
+\DeclareMathOperator{\SL}{SL}
+\DeclareMathOperator{\SO}{SO}
+\DeclareMathOperator{\SU}{SU}
+\DeclareMathOperator{\OO}{O}
+
+\hypersetup{
+colorlinks,
+linkcolor={blue},
+citecolor={blue!50!black},
+urlcolor={blue!80!black}
+}
+
+
+
+% THESE ARE FOR HEADERS AND FOOTERS 
+
+
+\usepackage[headsepline]{scrlayer-scrpage}
+\renewcommand{\headfont}{}
+\addtolength{\textheight}{3.14cm}
+\setlength{\footskip}{0.5in}
+\setlength{\headsep}{10pt}
+%
+\automark[chapter]{chapter}
+
+%
+% \rohead{\footnotesize\thepage}
+% \lehead{\footnotesize\thepage}
+\lohead{\footnotesize \leftmark}
+\chead{}
+\rofoot{}
+\refoot{}
+\lefoot{}
+\lofoot{}
+
+
+% 	THESE LINES INDICATE HOW THE CHAPTERS AND SECTIONS AND SUBSECTIONS LOOK LIKE
+\renewcommand*{\sectionformat}{\color{blue}\S\thesection\autodot\enskip}
+\renewcommand*{\subsectionformat}{\color{blue}\S\thesubsection\autodot\enskip}
+\renewcommand{\thesubsection}{\thesection.\roman{subsection}}
+
+\addtokomafont{chapterprefix}{\raggedleft}
+\RedeclareSectionCommand[beforeskip=0.5em]{chapter}
+\renewcommand*{\chapterformat}{%
+\mbox{\scalebox{1.5}{\chapappifchapterprefix{\nobreakspace}}%
+\scalebox{2.718}{\color{blue}\thechapter\autodot}\enskip}}
+
+% \addtokomafont{partprefix}{\rmfamily}
+% \renewcommand*{\partformat}{\color{blue}\scalebox{2.5}{\thepart}}
+
+
+\usepackage{thmtools}
+\usepackage[framemethod=TikZ]{mdframed}
+
+\theoremstyle{definition}
+\mdfdefinestyle{mdbluebox}{%
+roundcorner = 10pt,
+linewidth=1pt,
+skipabove=12pt,
+innerbottommargin=9pt,
+skipbelow=2pt,
+nobreak=true,
+linecolor=blue,
+backgroundcolor=TealBlue!5,
+}
+\declaretheoremstyle[
+headfont=\sffamily\bfseries\color{MidnightBlue},
+mdframed={style=mdbluebox},
+headpunct={\\[3pt]},
+postheadspace={0pt}
+]{thmbluebox}
+
+\mdfdefinestyle{mdredbox}{%
+linewidth=0.5pt,
+skipabove=7pt,
+frametitleaboveskip=5pt,
+frametitlebelowskip=0pt,
+skipbelow=2pt,
+frametitlefont=\bfseries,
+innertopmargin=4pt,
+innerbottommargin=8pt,
+% nobreak=true,
+linecolor=RawSienna,
+backgroundcolor=Salmon!5,
+}
+\declaretheoremstyle[
+headfont=\bfseries\color{RawSienna},
+mdframed={style=mdredbox},
+headpunct={\\[3pt]},
+postheadspace={0pt},
+bodyfont=\color{black},
+]{thmredbox}
+
+\mdfdefinestyle{mdneelbox}{%
+skipabove=8pt,
+linewidth=2pt,
+rightline=false,
+leftline=true,
+topline=false,
+bottomline=false,
+linecolor=RoyalBlue,
+backgroundcolor=RoyalBlue!5,
+}
+\declaretheoremstyle[
+headfont=\bfseries\sffamily\color{RoyalBlue!70!black},
+bodyfont=\normalfont,
+spaceabove=2pt,
+spacebelow=1pt,
+mdframed={style=mdneelbox},
+headpunct={\\[3pt]},
+]{thmneelbox}
+%%%%%%%%
+\mdfdefinestyle{mdazurebox}{%
+skipabove=8pt,
+linewidth=2pt,
+rightline=false,
+leftline=true,
+topline=false,
+bottomline=false,
+linecolor=azuree,
+backgroundcolor=azuree!5,
+}
+\declaretheoremstyle[
+headfont=\bfseries\sffamily\color{azuree!70!black},
+bodyfont=\normalfont,
+spaceabove=2pt,
+spacebelow=1pt,
+mdframed={style=mdazurebox},
+headpunct={\\[3pt]},
+]{thmazurebox}
+%%%%%%
+\mdfdefinestyle{mdcobaltbox}{%
+skipabove=8pt,
+linewidth=2pt,
+rightline=false,
+leftline=true,
+topline=false,
+bottomline=false,
+linecolor=Cobalt,
+backgroundcolor=Cobalt!5,
+}
+\declaretheoremstyle[
+headfont=\bfseries\sffamily\color{Cobalt!70!black},
+bodyfont=\normalfont,
+spaceabove=2pt,
+spacebelow=1pt,
+mdframed={style=mdcobaltbox},
+headpunct={\\[3pt]},
+]{thmcobaltbox}
+
+\newtheorem{remark}{Remark}[chapter]
+\newtheorem{example}{Example}[chapter]
+
+
+\declaretheorem[%
+style=thmcobaltbox,name=Theorem,numberwithin=chapter]{theorem}
+\declaretheorem[style=thmazurebox,name=Lemma,sibling=theorem]{lemma}
+\declaretheorem[style=thmneelbox,name=Proposition,sibling=theorem]{proposition}
+\declaretheorem[style=thmbluebox,name=Corollary,sibling=theorem]{corollary}
+% \declaretheorem[style=thmredbox,name=Example,numberwithin=chapter, sibling=ex]{example}
+% I dont do this anymore.
+
+\mdfdefinestyle{mdgreenbox}{%
+skipabove=8pt,
+linewidth=2pt,
+rightline=false,
+leftline=true,
+topline=false,
+bottomline=false,
+linecolor=ForestGreen,
+backgroundcolor=ForestGreen!5,
+}
+\declaretheoremstyle[
+headfont=\bfseries\sffamily\color{ForestGreen!70!black},
+bodyfont=\normalfont,
+spaceabove=2pt,
+spacebelow=1pt,
+mdframed={style=mdgreenbox},
+headpunct={: },
+]{thmgreenbox}
+
+\mdfdefinestyle{mdkalabox}{%
+skipabove=8pt,
+linewidth=2pt,
+rightline=false,
+leftline=true,
+topline=false,
+bottomline=false,
+linecolor=black,
+backgroundcolor=RedViolet!5!gray!5,
+}
+\declaretheoremstyle[
+headfont=\bfseries\sffamily\color{black},
+bodyfont=\normalfont,
+spaceabove=1pt,
+spacebelow=1pt,
+mdframed={style=mdkalabox},
+headpunct={.},
+]{thmkalabox}
+\declaretheorem[style=thmkalabox,name=Definition,numberwithin=chapter]{defn}
+
+\mdfdefinestyle{mdblackbox}{%
+skipabove=8pt,
+linewidth=3pt,
+rightline=false,
+leftline=true,
+topline=false,
+bottomline=false,
+linecolor=black,
+backgroundcolor=RedViolet!5!gray!5,
+}
+\declaretheoremstyle[
+headfont=\bfseries,
+bodyfont=\normalfont\small,
+spaceabove=0pt,
+spacebelow=0pt,
+mdframed={style=mdblackbox}
+]{thmblackbox}
+
+\theoremstyle{theorem}
+\declaretheorem[name=Claim,style=thmgreenbox, numbered = yes]{claim}
+
+
+\mdfdefinestyle{mdbalackbox}{%
+roundcorner = 10pt,
+linewidth=1pt,
+skipabove=8pt,
+innerbottommargin=9pt,
+skipbelow=0pt,
+linecolor=black,
+nobreak=true,
+%backgroundcolor=TealBlue!5,
+}
+\declaretheoremstyle[
+headfont=\sffamily\bfseries\color{Black},
+mdframed={style=mdbalackbox},
+headpunct={: }  ,
+postheadspace={0pt}
+]{thmbalackbox}
+\declaretheorem[style=thmbalackbox,name=Case,numbered=no]{case*}
+\declaretheorem[style=thmbalackbox,name=Case]{case}
+\newtheorem{subcase}{Subcase}[case]
+
+
+
+\mdfdefinestyle{mdremarkbox}{%
+roundcorner = 10pt,
+linewidth=1pt,
+skipabove=8pt,
+innerbottommargin=9pt,
+skipbelow=0pt,
+linecolor=purple,
+nobreak=true,
+backgroundcolor=purple!2,
+}
+\declaretheoremstyle[
+headfont=\sffamily\bfseries\color{purple},
+mdframed={style=mdremarkbox},
+headpunct={. }  ,
+postheadspace={0pt}
+]{thmremarkbox}
+
+\declaretheorem[style=thmremarkbox,name=Remark,numberwithin=chapter, sibling=remark]{remark*}
+\theoremstyle{definition}
+\newtheorem*{fact}{Fact}
+\newtheorem*{abuse}{Abuse of Notation}
+\newtheorem*{notation}{Notation}
+\newtheorem*{ques}{Question}
+\newtheorem{exercise}{Exercise}[chapter]
+\newtheorem{problem}{Problem}[chapter]
+\newtheorem{axiom}{Axiom}
+
+
+
+
+
+
+\usepackage[backend=biber,style=numeric]{biblatex}
+\addbibresource{references.bib}
+
+
+
+
+\usepackage{mathrsfs}
+
+\newcommand\MM{\mathscr M}
+\newcommand{\UU}{\mathscr U}
+\newcommand{\Bb}{\mathscr B}
+\newcommand{\Ss}{\mathscr S}
+\newcommand{\Cs}{\mathscr C}
+\newcommand{\Dd}{\mathscr D}
+\newcommand{\VV}{\mathscr V}
+\newcommand{\Nn}{\mathscr N}
+\newcommand{\Aa}{\mathscr A}
+\renewcommand{\emptyset}{\varnothing}

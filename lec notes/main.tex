@@ -1,0 +1,48 @@
+\documentclass[11pt,oneside,openright,numbers=noenddot]{scrbook}
+\input{tex/preamble}
+
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+\title{%
+% \includegraphics[scale=.75]{bracu_logo.png}~\\[2cm]
+JNI Memorial Winter School
+}
+\subtitle{ ~\\[1cm]
+\LARGE{Lecture Notes}}
+% \author{\LARGE \textsc{Atonu Roy Chowdhury} \\
+% \mailto{atonu.roy.chowdhury@g.bracu.ac.bd}}
+\date{}
+\usepackage{geometry}
+\geometry{
+a4paper,
+total={170mm,257mm},
+left=20mm,
+top=20mm,
+}
+
+\begin{document}
+\frontmatter
+
+\maketitle
+
+
+\include{tex/preface}
+% \setcounter{chapter}{-1}
+\cleardoublepage
+\newcounter{temppage}
+\setcounter{temppage}{\value{page}}
+\mainmatter
+\setcounter{page}{\value{temppage}}
+
+\tableofcontents
+
+\include{tex/chap1}
+
+\appendix
+
+\backmatter
+\nocite{*}
+\printbibliography
+
+\end{document}
